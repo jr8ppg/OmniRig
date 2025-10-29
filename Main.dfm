@@ -37,14 +37,12 @@ object MainForm: TMainForm
     0001800000018000000180000001800000018000000180000001800000018000
     0001800000018000000180000001800000018000000180000001FFFFFFFF}
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnHide = FormHide
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0

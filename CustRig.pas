@@ -314,6 +314,14 @@ begin
     //read data
     Data := nil;
 
+    // If any data is received while in phIdle, it is regarded as transceive data.
+    if FQueue.Phase = phIdle then begin
+      Data := StrToBytes(ComPort.RxBuffer);
+      MainForm.Log('RIG%d transceive received: %s', [RigNumber, BytesToHex(Data)]);
+      ProcessStatusReply(1, Data);
+      Exit;
+    end;
+
     if ComPort.RxBuffer <> '' then  Data := StrToBytes(ComPort.RxBuffer);
     ComPort.PurgeRx;
 
@@ -455,6 +463,11 @@ begin
 
     //try to open port
     if not ComPort.Open then try ComPort.Open := true; except end;
+
+    // If PollMs is 0, polling is disabled.
+    if PollMs = 0 then begin
+       Exit;
+    end;
 
     //refresh params
     if ComPort.Open and (Now > FNextStatusTime) then
