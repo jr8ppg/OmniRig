@@ -315,10 +315,10 @@ begin
     Data := nil;
 
     // If any data is received while in phIdle, it is regarded as transceive data.
-    if FQueue.Phase = phIdle then begin
+    if (FQueue.Phase = phIdle) and (PollMs = 0) then begin
       Data := StrToBytes(ComPort.RxBuffer);
       MainForm.Log('RIG%d transceive received: %s', [RigNumber, BytesToHex(Data)]);
-      ProcessStatusReply(1, Data);
+      ProcessStatusReply(0, Data);
       Exit;
     end;
 
@@ -466,6 +466,7 @@ begin
 
     // If PollMs is 0, polling is disabled.
     if PollMs = 0 then begin
+//       MainForm.Log('RIG%d PollMs is 0', [RigNumber]);
        Exit;
     end;
 

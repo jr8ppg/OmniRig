@@ -197,7 +197,7 @@ begin
    if numofports > 0 then begin
       PortComboBox.Clear();
       for i := 0 to numofports - 1 do begin
-         PortComboBox.Items.Add('COM' + IntToStr(portNumbers[i]));
+         PortComboBox.Items.Add('COM ' + IntToStr(portNumbers[i]));
       end;
    end;
 end;

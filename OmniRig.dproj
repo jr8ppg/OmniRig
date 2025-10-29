@@ -2,7 +2,7 @@
     <PropertyGroup>
         <ProjectGuid>{D813D09D-4C85-45FE-8659-156ED644F276}</ProjectGuid>
         <MainSource>OmniRig.dpr</MainSource>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
         <ProjectVersion>20.1</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
