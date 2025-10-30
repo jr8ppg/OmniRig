@@ -308,6 +308,7 @@ end;
 procedure TCustomRig.RecvEvent(Sender: TObject);
 var
   Data: TByteArray;
+  i: Integer;
 begin
   Lock;
   try
@@ -318,7 +319,9 @@ begin
     if (FQueue.Phase = phIdle) and (PollMs = 0) then begin
       Data := StrToBytes(ComPort.RxBuffer);
       MainForm.Log('RIG%d transceive received: %s', [RigNumber, BytesToHex(Data)]);
-      ProcessStatusReply(0, Data);
+      for i := Low(RigCommands.StatusCmd) to High(RigCommands.StatusCmd) do begin
+        ProcessStatusReply(i, Data);
+      end;
       Exit;
     end;
 
