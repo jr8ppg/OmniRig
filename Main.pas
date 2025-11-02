@@ -198,6 +198,7 @@ begin
    GetCommPortsForOldVersion(@portNumbers, SizeOf(portNumbers) div SizeOf(ULONG), numofports);
 
    if numofports > 0 then begin
+      PortComboBox.Clear();
       portlist := TList<ULONG>.Create();
       try
          for i := 0 to numofports - 1 do begin
