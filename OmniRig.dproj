@@ -4,7 +4,7 @@
         <MainSource>OmniRig.dpr</MainSource>
         <Config Condition="'$(Config)'==''">Release</Config>
         <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
-        <ProjectVersion>20.1</ProjectVersion>
+        <ProjectVersion>18.8</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
@@ -13,11 +13,6 @@
         <ProjectName Condition="'$(ProjectName)'==''">OmniRig</ProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
-        <Base_Win32>true</Base_Win32>
-        <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
@@ -69,11 +64,6 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.19.0.285;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <Icon_MainIcon>OmniRig_Icon.ico</Icon_MainIcon>
-        <Manifest_File>(なし)</Manifest_File>
-        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
-    </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
@@ -81,6 +71,9 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_MinorVer>20</VerInfo_MinorVer>
+        <VerInfo_Build>0</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.20.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <Manifest_File>(なし)</Manifest_File>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
@@ -92,10 +85,8 @@
         <VerInfo_MinorVer>20</VerInfo_MinorVer>
         <VerInfo_AutoGenVersion>false</VerInfo_AutoGenVersion>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.20.0.289;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.20.0.285;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <Manifest_File>(None)</Manifest_File>
-        <VerInfo_Build>289</VerInfo_Build>
-        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -181,7 +172,6 @@
                     <VersionInfoKeys Name="Comments"/>
                 </VersionInfoKeys>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclfmxstd290.bpl">Embarcadero FMX 標準コンポーネント</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\Skia.Package.FMX.Designtime290.bpl">Skia4Delphi FMX 設計時パッケージ</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\fmxstyledesigner290.bpl">Embarcadero スタイル デザイナ パッケージ</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 オートメーション サーバー ラッパー コンポーネントのサンプル</Excluded_Packages>

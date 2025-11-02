@@ -57,7 +57,7 @@ object MainForm: TMainForm
       33)
     object OkBtn: TButton
       Left = 249
-      Top = 5
+      Top = 4
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -69,7 +69,7 @@ object MainForm: TMainForm
     end
     object CancelBtn: TButton
       Left = 329
-      Top = 5
+      Top = 4
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -465,6 +465,20 @@ object MainForm: TMainForm
         Width = 132
         Height = 13
         Caption = 'Alex Shovkoplyas, VE3NEA'
+      end
+      object Label19: TLabel
+        Left = 10
+        Top = 253
+        Width = 177
+        Height = 13
+        Caption = 'Copyright '#169' 2025 JR8PPG, JH5GHM'
+      end
+      object Label20: TLabel
+        Left = 6
+        Top = 238
+        Width = 184
+        Height = 13
+        Caption = 'This version supports transceive mode.'
       end
     end
   end

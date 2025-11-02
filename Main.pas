@@ -21,7 +21,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, ExtCtrls, StdCtrls, CustRig, RigObj, RigSett, IniFiles, RigCmds,
   AppEvnts, ComServ, AutoApp, AlStrLst, Spin, ShellApi, Registry,
-  ShlObj;
+  ShlObj, System.Generics.Collections;
 
 type
   TMainForm = class(TForm)
@@ -62,6 +62,8 @@ type
     Label18: TLabel;
     Label11: TLabel;
     DtrComboBox: TComboBox;
+    Label19: TLabel;
+    Label20: TLabel;
     procedure OkBtnClick(Sender: TObject);
     procedure CancelBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -153,7 +155,7 @@ begin
   Rig2.Enabled := true;
 
   Panel2.Align := alClient;
-  Width := 214;
+  Width := 220;
   Label9.Caption := Format('Version %d.%d', [HiWord(GetVersion), LoWord(GetVersion)]);
 
 
@@ -190,14 +192,24 @@ var
    i: Integer;
    portNumbers: array[0..50] of ULONG;
    numofports: ULONG;
+   portlist: TList<ULONG>;
 begin
    ZeroMemory(@portNumbers, SizeOf(portNumbers));
    GetCommPortsForOldVersion(@portNumbers, SizeOf(portNumbers) div SizeOf(ULONG), numofports);
 
    if numofports > 0 then begin
-      PortComboBox.Clear();
-      for i := 0 to numofports - 1 do begin
-         PortComboBox.Items.Add('COM ' + IntToStr(portNumbers[i]));
+      portlist := TList<ULONG>.Create();
+      try
+         for i := 0 to numofports - 1 do begin
+            portlist.add(portNumbers[i]);
+         end;
+         portlist.Sort();
+
+         for i := 0 to portlist.Count - 1 do begin
+            PortComboBox.Items.Add('COM ' + IntToStr(portlist[i]));
+         end;
+      finally
+         portlist.Free();
       end;
    end;
 end;
