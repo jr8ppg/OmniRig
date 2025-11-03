@@ -17,7 +17,7 @@ unit AutoApp;
 interface
 
 uses
-  Windows, SysUtils, ComObj, ActiveX, AxCtrls, Classes, OmniRig_TLB, StdVcl,
+  Windows, SysUtils, ComObj, ActiveX, AxCtrls, Classes, OmniRig_TLB, StdVcl, Types,
   AutoRig, CustRig, ByteFuns, RigObj, ScrFctry;
 
 type

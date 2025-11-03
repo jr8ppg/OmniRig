@@ -37,14 +37,12 @@ object MainForm: TMainForm
     0001800000018000000180000001800000018000000180000001800000018000
     0001800000018000000180000001800000018000000180000001FFFFFFFF}
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnHide = FormHide
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -59,7 +57,7 @@ object MainForm: TMainForm
       33)
     object OkBtn: TButton
       Left = 249
-      Top = 5
+      Top = 4
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -71,7 +69,7 @@ object MainForm: TMainForm
     end
     object CancelBtn: TButton
       Left = 329
-      Top = 5
+      Top = 4
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -292,7 +290,7 @@ object MainForm: TMainForm
         Height = 22
         MaxLength = 4
         MaxValue = 2000
-        MinValue = 100
+        MinValue = 0
         TabOrder = 7
         Value = 100
       end
@@ -467,6 +465,20 @@ object MainForm: TMainForm
         Width = 132
         Height = 13
         Caption = 'Alex Shovkoplyas, VE3NEA'
+      end
+      object Label19: TLabel
+        Left = 10
+        Top = 253
+        Width = 177
+        Height = 13
+        Caption = 'Copyright '#169' 2025 JR8PPG, JH5GHM'
+      end
+      object Label20: TLabel
+        Left = 6
+        Top = 238
+        Width = 184
+        Height = 13
+        Caption = 'This version supports transceive mode.'
       end
     end
   end

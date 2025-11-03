@@ -308,11 +308,22 @@ end;
 procedure TCustomRig.RecvEvent(Sender: TObject);
 var
   Data: TByteArray;
+  i: Integer;
 begin
   Lock;
   try
     //read data
     Data := nil;
+
+    // If any data is received while in phIdle, it is regarded as transceive data.
+    if (FQueue.Phase = phIdle) and (PollMs = 0) then begin
+      Data := StrToBytes(ComPort.RxBuffer);
+      MainForm.Log('RIG%d transceive received: %s', [RigNumber, BytesToHex(Data)]);
+      for i := Low(RigCommands.StatusCmd) to High(RigCommands.StatusCmd) do begin
+        ProcessStatusReply(i, Data);
+      end;
+      Exit;
+    end;
 
     if ComPort.RxBuffer <> '' then  Data := StrToBytes(ComPort.RxBuffer);
     ComPort.PurgeRx;
@@ -455,6 +466,12 @@ begin
 
     //try to open port
     if not ComPort.Open then try ComPort.Open := true; except end;
+
+    // If PollMs is 0, polling is disabled.
+    if PollMs = 0 then begin
+//       MainForm.Log('RIG%d PollMs is 0', [RigNumber]);
+       Exit;
+    end;
 
     //refresh params
     if ComPort.Open and (Now > FNextStatusTime) then

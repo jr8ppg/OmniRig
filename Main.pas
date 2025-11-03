@@ -20,8 +20,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, ExtCtrls, StdCtrls, CustRig, RigObj, RigSett, IniFiles, RigCmds,
-  AppEvnts, ComServ, AutoApp, AlStrLst, Spin, ShellApi, WinSpool,
-  ShlObj;
+  AppEvnts, ComServ, AutoApp, AlStrLst, Spin, ShellApi, Registry,
+  ShlObj, System.Generics.Collections;
 
 type
   TMainForm = class(TForm)
@@ -62,6 +62,8 @@ type
     Label18: TLabel;
     Label11: TLabel;
     DtrComboBox: TComboBox;
+    Label19: TLabel;
+    Label20: TLabel;
     procedure OkBtnClick(Sender: TObject);
     procedure CancelBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -112,6 +114,8 @@ type
     procedure Log(Msg: AnsiString; const Args: array of const); overload;
   end;
 
+function GetCommPortsForOldVersion(lpPortNumbers: PULONG; uPortNumbersCount: ULONG; var puPortNumbersFound: ULONG): ULONG;
+
 var
   MainForm: TMainForm;
 
@@ -151,7 +155,7 @@ begin
   Rig2.Enabled := true;
 
   Panel2.Align := alClient;
-  Width := 214;
+  Width := 220;
   Label9.Caption := Format('Version %d.%d', [HiWord(GetVersion), LoWord(GetVersion)]);
 
 
@@ -185,42 +189,30 @@ end;
 
 procedure TMainForm.ListComPorts;
 var
-  i: integer;
-  PortName: string;
-
-  Siz, Cnt: Cardinal;
-  Ports: array[0..255] of TPortInfo1;
+   i: Integer;
+   portNumbers: array[0..50] of ULONG;
+   numofports: ULONG;
+   portlist: TList<ULONG>;
 begin
-{!} Exit;
+   ZeroMemory(@portNumbers, SizeOf(portNumbers));
+   GetCommPortsForOldVersion(@portNumbers, SizeOf(portNumbers) div SizeOf(ULONG), numofports);
 
+   if numofports > 0 then begin
+      PortComboBox.Clear();
+      portlist := TList<ULONG>.Create();
+      try
+         for i := 0 to numofports - 1 do begin
+            portlist.add(portNumbers[i]);
+         end;
+         portlist.Sort();
 
-  PortComboBox.Items.Clear;
-
-  if not EnumPorts(nil, 1, @Ports, SizeOf(Ports), Siz, Cnt) then Exit;
-  for i:=0 to Cnt-1 do
-    begin
-    PortName := Ports[i].pName;
-    SetLength(PortName, Length(PortName)-1); //delete ":" at the end
-    if Copy(PortName, 1, 3) = 'COM' then
-      PortComboBox.Items.Add(PortName);
-    end;
-
-  Log('COM ports found: ' + PortComboBox.Items.CommaText);
-
-{
-  when this opens COM2, my rig switches to TX mode
-
-  PortComboBox.Items.Clear;
-  for i:=1 to 16 do
-    begin
-    PortName := '\\.\COM' + IntToStr(i);
-    Port := CreateFile(PChar(PortName), GENERIC_READ or GENERIC_WRITE, 0, nil, OPEN_EXISTING, 0, 0);
-    if (Port <> INVALID_HANDLE_VALUE) or (GetLastError = ERROR_ACCESS_DENIED)
-      then PortComboBox.Items.Add('COM' + IntToStr(i));
-    CloseHandle(Port);
-    end;
-  Log('COM ports found: ' + PortComboBox.Items.CommaText);
-}
+         for i := 0 to portlist.Count - 1 do begin
+            PortComboBox.Items.Add('COM ' + IntToStr(portlist[i]));
+         end;
+      finally
+         portlist.Free();
+      end;
+   end;
 end;
 
 
@@ -601,6 +593,51 @@ begin
 end;
 
 
+function GetCommPortsForOldVersion(lpPortNumbers: PULONG; uPortNumbersCount: ULONG; var puPortNumbersFound: ULONG): ULONG;
+var
+   reg: TRegistry;
+   slKey: TStringList;
+   i: Integer;
+   S: string;
+   P: PULONG;
+   c: ULONG;
+   portnum: Integer;
+begin
+   slKey := TStringList.Create();
+   reg := TRegistry.Create(KEY_READ);
+   try
+      reg.RootKey := HKEY_LOCAL_MACHINE;
+      reg.OpenKey('HARDWARE\DEVICEMAP\SERIALCOMM', False);
+
+      reg.GetValueNames(slKey);
+
+      P := lpPortNumbers;
+      c := 0;
+      for i := 0 to slKey.Count - 1 do begin
+         if c >= uPortNumbersCount then begin
+            Break;
+         end;
+
+         S := reg.ReadString(slKey[i]);
+
+         S := StringReplace(S, 'COM', '', [rfReplaceAll]);
+
+         portnum := StrToIntDef(S, 0);
+         if (portnum >= 1) and (portnum <= 99) then begin
+            P^ := portnum;
+            Inc(P);
+            Inc(c);
+         end;
+      end;
+
+      puPortNumbersFound := c;
+   finally
+      reg.Free();
+      slKey.Free();
+   end;
+
+   Result := 0;
+end;
 
 
 
