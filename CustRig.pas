@@ -320,6 +320,7 @@ begin
       Data := StrToBytes(ComPort.RxBuffer);
       MainForm.Log('RIG%d transceive received: %s', [RigNumber, BytesToHex(Data)]);
       for i := Low(RigCommands.StatusCmd) to High(RigCommands.StatusCmd) do begin
+        ComPort.RxBlockTerminator := BytesToStr(RigCommands.StatusCmd[i].ReplyEnd);
         ProcessStatusReply(i, Data);
       end;
       Exit;
