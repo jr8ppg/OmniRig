@@ -374,31 +374,79 @@ var
   Fire: boolean;
   Errors: DWORD;
   ComStat: TComStat;
+  UnprocessedData: AnsiString;
+  Index: Integer;
+  rxlist: TStringList;
+  i: Integer;
+  n: Integer;
 begin
+  rxlist := TStringList.Create();
+
   //read rx count
   ClearCommError(FPortHandle, Errors, @ComStat);
   Cnt := ComStat.cbInQue;
   if Cnt = 0 then Exit;
 
   //read bytes
+  UnprocessedData := '';
   OldCnt := Length(RxBuffer);
   SetLength(RxBuffer, OldCnt + Cnt);
   FillChar(RdOverLapped, SizeOf(RdOverLapped), 0);
   ReadFile(FPortHandle, RxBuffer[OldCnt+1], Cnt, Cnt, @RdOverLapped);
 
   //fire rx event according to RxBlockMode
+  rxlist.Clear();
   case RxBlockMode of
-    rbBlockSize: Fire := Length(RxBuffer) >= RxBlockSize;
-    rbTerminator: Fire := Pos(RxBlockTerminator, RxBuffer) > 0;
-    else {rbChar:} Fire := true;
+    rbBlockSize: begin
+      Fire := Length(RxBuffer) >= RxBlockSize;
+      if Fire then begin
+        rxlist.Add(string(RxBuffer));
+      end;
     end;
+
+    rbTerminator: begin
+      Fire := False;
+      UnprocessedData := RxBuffer;
+      while True do begin
+        Index := Pos(RxBlockTerminator, UnprocessedData);
+        if Index = 0 then begin
+          RxBuffer := UnprocessedData;
+          Break;
+        end;
+
+        n := Length(RxBlockTerminator);
+        if Index = Length(UnprocessedData) then begin
+          RxBuffer := UnprocessedData;
+          UnprocessedData := '';
+        end
+        else begin
+          RxBuffer := Copy(UnprocessedData, 1, Index + n - 1);
+          UnprocessedData := Copy(UnprocessedData, Index + n);
+        end;
+        rxlist.Add(string(RxBuffer));
+        Fire := True;
+      end;
+    end;
+
+    else begin
+      {rbChar:}
+      Fire := True;
+      rxlist.Add(string(RxBuffer));
+    end;
+  end;
 
   //purge buffer
   if Fire then
     begin
-    FireRxEvent;
-    RxBuffer := '';
+      for i := 0 to rxlist.Count - 1 do begin
+        RxBuffer := AnsiString(rxlist[i]);
+        FireRxEvent;
+      end;
+
+      RxBuffer := UnprocessedData;
     end;
+
+  rxlist.Free();
 end;
 
 
