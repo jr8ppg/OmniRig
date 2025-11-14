@@ -1,0 +1,325 @@
+15:08:22.612  Omni-Rig started: Version 1.19
+15:08:22.640  Loading commands from "ZS-1.ini"
+15:08:22.651  Loading commands from "TS-930.ini"
+15:08:22.663  Loading commands from "TS-870.ini"
+15:08:22.675  Loading commands from "TS-690.ini"
+15:08:22.687  Loading commands from "TS-590.ini"
+15:08:22.700  Loading commands from "TS-480.ini"
+15:08:22.712  Loading commands from "TS-440.ini"
+15:08:22.723  Loading commands from "TS-2000.ini"
+15:08:22.734  Loading commands from "TenTec RX-350.ini"
+15:08:22.739  Loading commands from "TenTec Paragon II.ini"
+15:08:22.749  Loading commands from "TenTec Orion.ini"
+15:08:22.759  Loading commands from "TenTec Omni VI_plus.ini"
+15:08:22.764  Loading commands from "TenTec Omni VII.ini"
+15:08:22.773  Loading commands from "TenTec Jupiter.ini"
+15:08:22.777  Loading commands from "PowerSDR.ini"
+15:08:22.789  Loading commands from "PowerRX2.ini"
+15:08:22.801  Loading commands from "Perseus.ini"
+15:08:22.805  Loading commands from "NRD-535DG.ini"
+15:08:22.810  Loading commands from "Kenwood.ini"
+15:08:22.822  Loading commands from "JST-245.ini"
+15:08:22.827  Loading commands from "IC-R9000.ini"
+15:08:22.833  Loading commands from "IC-R8500.ini"
+15:08:22.839  Loading commands from "IC-R75.ini"
+15:08:22.845  Loading commands from "IC-R75-chromos.ini"
+15:08:22.852  Loading commands from "IC-M710.ini"
+15:08:22.858  Loading commands from "IC-9100.ini"
+15:08:22.865  Loading commands from "IC-910.ini"
+15:08:22.872  Loading commands from "IC-7851.ini"
+15:08:22.890  Loading commands from "IC-781_1.ini"
+15:08:22.897  Loading commands from "IC-781.ini"
+15:08:22.903  Loading commands from "IC-7800.ini"
+15:08:22.914  Loading commands from "IC-78.ini"
+15:08:22.923  Loading commands from "IC-775.ini"
+15:08:22.929  Loading commands from "IC-7700.ini"
+15:08:22.939  Loading commands from "IC-765.ini"
+15:08:22.946  Loading commands from "IC-761.ini"
+15:08:22.952  Loading commands from "IC-7600.ini"
+15:08:22.959  Loading commands from "IC-756.ini"
+15:08:22.967  Loading commands from "IC-756 Pro.ini"
+15:08:22.977  Loading commands from "IC-756 Pro III.ini"
+15:08:22.987  Loading commands from "IC-756 Pro II.ini"
+15:08:22.998  Loading commands from "IC-751.ini"
+15:08:23.004  Loading commands from "IC-746.ini"
+15:08:23.013  Loading commands from "IC-746 Pro.ini"
+15:08:23.024  Loading commands from "IC-7410.ini"
+15:08:23.031  Loading commands from "IC-7410 (1).ini"
+15:08:23.038  Loading commands from "IC-738.ini"
+15:08:23.044  Loading commands from "IC-737.ini"
+15:08:23.051  Loading commands from "IC-736 (untested).ini"
+15:08:23.058  Loading commands from "IC-735.ini"
+15:08:23.063  Loading commands from "IC-7315.ini"
+15:08:23.065  Loading commands from "IC-728.ini"
+15:08:23.072  Loading commands from "IC-726.ini"
+15:08:23.080  Loading commands from "IC-725a.ini"
+15:08:23.087  Loading commands from "IC-725.ini"
+15:08:23.093  Loading commands from "IC-7200.ini"
+15:08:23.104  Loading commands from "IC-718.ini"
+15:08:23.112  Loading commands from "IC-706.ini"
+15:08:23.119  Loading commands from "IC-706 MKIIG.ini"
+15:08:23.126  Loading commands from "IC-706 MKII.ini"
+15:08:23.133  Loading commands from "IC-703a.ini"
+15:08:23.140  Loading commands from "IC-703.ini"
+15:08:23.147  Loading commands from "IC-7000.ini"
+15:08:23.154  Loading commands from "IC-275H.ini"
+15:08:23.161  Loading commands from "IC- 970D.ini"
+15:08:23.170  Loading commands from "FT-DX5000MP.ini"
+15:08:23.185  Loading commands from "FT-990.ini"
+15:08:23.195  Loading commands from "FT-950.ini"
+15:08:23.210  Loading commands from "FT-920.ini"
+15:08:23.222  Loading commands from "FT-9000v1.ini"
+15:08:23.236  Loading commands from "FT-900.ini"
+15:08:23.246  Loading commands from "FT-897.ini"
+15:08:23.254  Loading commands from "FT-857.ini"
+15:08:23.262  Loading commands from "FT-847.ini"
+15:08:23.268  Loading commands from "FT-840.ini"
+15:08:23.278  Loading commands from "FT-817.ini"
+15:08:23.286  Loading commands from "FT-757GXII.ini"
+15:08:23.293  Loading commands from "FT-747.ini"
+15:08:23.304  Loading commands from "FT-450.ini"
+15:08:23.318  Loading commands from "FT-2KFSKPEPV3.ini"
+15:08:23.337  Loading commands from "FT-2KAFSKPEPV3.ini"
+15:08:23.354  Loading commands from "FT-2000PEPV3.ini"
+15:08:23.368  Loading commands from "FT-2000.ini"
+15:08:23.384  Loading commands from "FT-1000.ini"
+15:08:23.396  Loading commands from "FT-1000 MP.ini"
+15:08:23.407  Loading commands from "FT-100 D.ini"
+15:08:23.416  Loading commands from "FRG-100.ini"
+15:08:23.420  Loading commands from "Elecraft K3.ini"
+15:08:23.433  Loading commands from "Elecraft K2.ini"
+15:08:23.444  Loading commands from "DX-77.ini"
+15:08:23.456  Loading commands from "CODAN.ini"
+15:08:23.460  Loading commands from "AR8600.ini"
+15:08:23.463  Loading commands from "AORAR5000.ini"
+15:08:23.469  Loading commands from "ADT-200A.ini"
+15:08:23.486  RIG 1 settings: Rig=IC-7851|Port=COM6|Baud=115200|Data=8|Parity=None|Stop=1|RTS=High|Dtr=High|Poll=0|Timeout=4000
+15:08:23.486  RIG 2 settings: Rig=IC-7851|Port=COM29|Baud=115200|Data=8|Parity=None|Stop=1|RTS=High|Dtr=High|Poll=0|Timeout=4000
+15:08:23.486  Starting RIG1
+15:08:23.490  RIG1 sending init command: FEFE8EE01A05015801FD
+15:08:23.491  RIG1 ComPort.Send called, 10 bytes in TX buffer
+15:08:23.491  Starting RIG2
+15:08:23.494  RIG2 sending init command: FEFE8EE01A05015801FD
+15:08:23.494  RIG2 ComPort.Send called, 10 bytes in TX buffer
+15:08:23.498  RIG1 data sent, 0 bytes in TX buffer
+15:08:23.498  RIG2 data sent, 0 bytes in TX buffer
+15:08:23.498  RIG1 reply received: FEFE8EE01A05015801FDFEFEE08EFBFD
+15:08:23.498  RIG1 sending init command: FEFE8EE01A05015501FD
+15:08:23.498  RIG1 ComPort.Send called, 10 bytes in TX buffer
+15:08:23.498  RIG2 reply received: FEFE8EE01A05015801FDFEFEE08EFBFD
+15:08:23.499  RIG2 sending init command: FEFE8EE01A05015501FD
+15:08:23.499  RIG2 ComPort.Send called, 10 bytes in TX buffer
+15:08:23.499  RIG1 data sent, 0 bytes in TX buffer
+15:08:23.499  RIG2 data sent, 0 bytes in TX buffer
+15:08:23.501  RIG1 reply received: FEFE8EE01A05015501FDFEFEE08EFBFD
+15:08:23.501  RIG1 sending init command: FEFE8EE01A05014000FD
+15:08:23.501  RIG1 ComPort.Send called, 10 bytes in TX buffer
+15:08:23.501  RIG2 reply received: FEFE8EE01A05015501FDFEFEE08EFBFD
+15:08:23.501  RIG2 sending init command: FEFE8EE01A05014000FD
+15:08:23.501  RIG2 ComPort.Send called, 10 bytes in TX buffer
+15:08:23.501  RIG1 data sent, 0 bytes in TX buffer
+15:08:23.502  RIG2 data sent, 0 bytes in TX buffer
+15:08:23.504  RIG1 reply received: FEFE8EE01A05014000FDFEFEE08EFBFD
+15:08:23.504  RIG1 sending status command: FEFE8EE02500FD
+15:08:23.504  RIG1 ComPort.Send called, 7 bytes in TX buffer
+15:08:23.505  RIG2 reply received: FEFE8EE01A05014000FDFEFEE08EFBFD
+15:08:23.505  RIG2 sending status command: FEFE8EE02500FD
+15:08:23.505  RIG2 ComPort.Send called, 7 bytes in TX buffer
+15:08:23.505  RIG1 data sent, 0 bytes in TX buffer
+15:08:23.505  RIG2 data sent, 0 bytes in TX buffer
+15:08:23.521  RIG1 Entering GetRxFrequency
+15:08:23.521  RIG1 Leaving GetRxFrequency
+15:08:23.525  RIG2 Entering GetRxFrequency
+15:08:23.525  RIG2 Leaving GetRxFrequency
+15:08:30.728  RIG2 reply received: FEFE8EE02500FDFEFEE08E25003008482800FDFEFE008E010102FD
+15:08:30.728  {!}RIG2 reply validation failed
+15:08:30.728  RIG2 sending status command: FEFE8EE02501FD
+15:08:30.729  RIG2 ComPort.Send called, 7 bytes in TX buffer
+15:08:30.729  RIG2 data sent, 0 bytes in TX buffer
+15:08:30.732  RIG2 reply received: FEFE8EE02501FDFEFEE08E25017044422800FD
+15:08:30.732  {!}RIG2 reply validation failed
+15:08:30.732  RIG2 sending status command: FEFE8EE001FD
+15:08:30.732  RIG2 ComPort.Send called, 6 bytes in TX buffer
+15:08:30.732  RIG2 data sent, 0 bytes in TX buffer
+15:08:36.004  RIG2 reply received: FEFE8EE001FDFEFE008E010002FDFEFE008E010702FD
+15:08:36.004  {!}RIG2 reply validation failed
+15:08:36.004  RIG2 sending status command: FEFE8EE004FD
+15:08:36.004  RIG2 ComPort.Send called, 6 bytes in TX buffer
+15:08:36.005  RIG2 data sent, 0 bytes in TX buffer
+15:08:37.610  RIG2 reply received: FEFE8EE004FDFEFEE08E040702FDFEFE008E010302FD
+15:08:37.610  RIG2 status changed: pmCW_L enabled
+15:08:37.610  RIG2 status changed: pmSSB_L enabled
+15:08:37.610  RIG2 sending status command: FEFE8EE02502FD
+15:08:37.610  RIG2 ComPort.Send called, 7 bytes in TX buffer
+15:08:37.616  RIG2 data sent, 0 bytes in TX buffer
+15:08:40.612  RIG2 reply received: FEFE8EE02502FDFEFEE08EFAFDFEFE008E010702FDFEFE008E010302FD
+15:08:40.612  {!}RIG2 reply validation failed
+15:08:40.612  RIG2 sending status command: FEFE8EE00FFD
+15:08:40.612  RIG2 ComPort.Send called, 6 bytes in TX buffer
+15:08:40.612  RIG2 data sent, 0 bytes in TX buffer
+15:08:40.614  RIG2 reply received: FEFE8EE00FFDFEFEE08E0F00FD
+15:08:40.614  {!}RIG2 reply validation failed
+15:08:40.614  RIG2 sending status command: FEFE8EE02101FD
+15:08:40.614  RIG2 ComPort.Send called, 7 bytes in TX buffer
+15:08:40.614  RIG2 data sent, 0 bytes in TX buffer
+15:08:40.617  RIG2 reply received: FEFE8EE02101FDFEFEE08E210100FD
+15:08:40.617  {!}RIG2 reply validation failed
+15:08:40.617  RIG2 sending status command: FEFE8EE02102FD
+15:08:40.617  RIG2 ComPort.Send called, 7 bytes in TX buffer
+15:08:40.617  RIG2 data sent, 0 bytes in TX buffer
+15:08:40.620  RIG2 reply received: FEFE8EE02102FDFEFEE08E210200FD
+15:08:40.620  {!}RIG2 reply validation failed
+15:08:40.620  RIG2 sending status command: FEFE8EE007D2FD
+15:08:40.620  RIG2 ComPort.Send called, 7 bytes in TX buffer
+15:08:40.620  RIG2 data sent, 0 bytes in TX buffer
+15:08:40.623  RIG2 reply received: FEFE8EE007D2FDFEFEE08E07D200FD
+15:08:40.623  RIG2 status changed: pmVfoA enabled
+15:08:41.612  RIG2 transceive received: FEFE008E010702FDFEFE008E010302FD
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:41.612  {!}RIG2 reply validation failed
+15:08:42.407  RIG2 transceive received: FEFE008E010702FDFEFE008E010302FD
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:42.407  {!}RIG2 reply validation failed
+15:08:43.223  RIG2 transceive received: FEFE008E010702FDFEFE008E010302FD
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:43.223  {!}RIG2 reply validation failed
+15:08:45.274  RIG2 transceive received: FEFE008E010102FDFEFE008E010002FD
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:45.274  {!}RIG2 reply validation failed
+15:08:48.378  RIG2 transceive received: FEFE008E010102FDFEFE008E010302FD
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:48.378  {!}RIG2 reply validation failed
+15:08:51.322  RIG2 transceive received: FEFE008E010702FDFEFE008E010102FD
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:51.323  {!}RIG2 reply validation failed
+15:08:53.021  RIG2 transceive received: FEFE008E010002FDFEFE008E010102FD
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:53.021  {!}RIG2 reply validation failed
+15:08:55.718  RIG2 transceive received: FEFE008E010702FDFEFE008E010302FD
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:55.718  {!}RIG2 reply validation failed
+15:08:58.797  RIG2 transceive received: FEFE008E010102FDFEFE008E010002FD
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:08:58.797  {!}RIG2 reply validation failed
+15:09:00.754  RIG2 transceive received: FEFE008E010302FDFEFE008E010702FD
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:00.754  RIG2 status changed: pmCW_U enabled
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:00.754  {!}RIG2 reply validation failed
+15:09:02.895  RIG2 transceive received: FEFE008E010102FDFEFE008E010002FD
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:02.895  {!}RIG2 reply validation failed
+15:09:03.415  RIG2 transceive received: FEFE008E010102FDFEFE008E010002FD
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:03.415  {!}RIG2 reply validation failed
+15:09:04.379  RIG2 transceive received: FEFE008E010102FDFEFE008E010702FD
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.379  {!}RIG2 reply validation failed
+15:09:04.893  RIG2 transceive received: FEFE008E010302FDFEFE008E010702FD
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:04.893  {!}RIG2 reply validation failed
+15:09:06.230  RIG2 transceive received: FEFE008E010302FDFEFE008E010102FD
+15:09:06.230  {!}RIG2 reply validation failed
+15:09:06.230  {!}RIG2 reply validation failed
+15:09:06.230  RIG2 status changed: pmSSB_U enabled
+15:09:06.230  {!}RIG2 reply validation failed
+15:09:06.230  {!}RIG2 reply validation failed
+15:09:06.230  {!}RIG2 reply validation failed
+15:09:06.230  {!}RIG2 reply validation failed
+15:09:06.230  {!}RIG2 reply validation failed
+15:09:06.230  {!}RIG2 reply validation failed
